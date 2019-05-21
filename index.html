@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>carecorner_rails_development Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="bower/html5shiv/html5shiv.min.js"></script>
+  <script src="bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand"><b>carecorner_rails_development</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+			<li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+			<li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>Tables</h1></br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="callout callout-info">
+					<h4>SchemaSpy Analysis of carecorner_rails_development</h4>
+					<p>Generated on Tue May 21 17:22 SGT 2019</p>
+				</div>
+			</div>
+		</div>
+
+
+        <a href="carecorner_rails_development.carecorner_rails_development.xml" title="XML Representation">XML Representation</a></br>
+		<a href="insertionOrder.txt" title="Useful for loading data into a database">Insertion Order</a>
+        <a href="deletionOrder.txt" title="Useful for purging data from a database">Deletion Order</a>	
+      </section>
+      <!-- Main content -->
+      <section class="content">
+		  <div class="row">
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
+				  <div class="info-box-content">
+					  <span class="info-box-text">TABLES</span>
+					  <span class="info-box-number">108</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+			<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-teal"><i class="fa fa-table"></i></span>
+				  <div class="info-box-content">
+					  <span class="info-box-text">VIEWS</span>
+					  <span class="info-box-number">0</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+			<!-- /.col -->
+
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-green"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
+
+				  <div class="info-box-content">
+					  <span class="info-box-text">COLUMNS</span>
+					  <span class="info-box-number">981</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+		  <!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-yellow"><i class="ion ion-key"></i></span>
+
+				  <div class="info-box-content">
+					  <span class="info-box-text">Constraints</span>
+					  <span class="info-box-number">101</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+			<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-red-active"><i class="fa fa-question" aria-hidden="true"></i></span>
+
+				  <div class="info-box-content">
+					  <span class="info-box-text">Anomalies</span>
+					  <span class="info-box-number">6</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+		  	<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-navy"><i class="fa fa-file-code-o" aria-hidden="true"></i></span>
+
+					<div class="info-box-content">
+						<span class="info-box-text">Routines</span>
+						<span class="info-box-number">0</span>
+					</div>
+					<!-- /.info-box-content -->
+				</div>
+				<!-- /.info-box -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+			  <h3 class="box-title">Database Properties</h3>
+			  <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>			  
+			</div><!-- /.box-header -->
+			<div class="box-body">
+			  <p>Database Type: MySQL - 8.0.16</p>			  
+			</div><!-- /.box-body -->
+		</div>
+		<div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tables</h3>			  
+			  <span class="label label-primary pull-right"><i class="fa fa-database fa-2x"></i></span>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+			<div class="row">
+				<div id="button_group_one" class="col-md-3 col-sm-6"></div>
+				<div id="button_group_two" class="col-md-2 col-sm-4 pull-right text-right"></div>
+			</div>
+            <table id="database_objects" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+					<tr>
+					  <th valign="bottom">Table / View</th>
+					  <th align="right" valign="bottom">Children</th>
+					  <th align="right" valign="bottom">Parents</th>
+					  <th align="right" valign="bottom">Columns</th>
+					  <th align="right" valign="bottom">Rows</th>
+					  <th align="right" valign="bottom">Type</th>
+					  <th class="toggle">Comments</th>
+					</tr>
+				</thead>
+				<tbody>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases_groups.html">case_cases_groups</a></td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_goals.html">case_goals</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_types.html">case_types</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases_groups_histories.html">case_cases_groups_histories</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_session_infos.html">migrated_session_infos</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_contacts.html">cvwo_contacts</a></td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">9</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_organisations_offices_contacts.html">cvwo_organisations_offices_contacts</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_organisations_offices_venues.html">cvwo_organisations_offices_venues</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">9</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/display_settings_settings.html">display_settings_settings</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_referral_activities.html">intake_referral_activities</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_intakes.html">intake_intakes</a></td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">33</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/clients_emergency_contacts.html">clients_emergency_contacts</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_questionnaires.html">case_questionnaires</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_special_needs.html">intake_special_needs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_presenting_problems.html">case_presenting_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_not_making_appointment_reasons.html">intake_not_making_appointment_reasons</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/event_events.html">event_events</a></td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">16</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_sors.html">migrated_category_sors</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_clinical_logs.html">supervision_clinical_logs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/clients_special_needs.html">clients_special_needs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">9</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/users.html">users</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">16</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_temporal_permissions.html">case_temporal_permissions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_closures.html">case_closures</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">14</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_organisations_people.html">cvwo_organisations_people</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">14</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_professions.html">migrated_category_professions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_case_reviews.html">supervision_case_reviews</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">21</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_organisations_offices.html">cvwo_organisations_offices</a></td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people_addresses.html">cvwo_people_addresses</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/clients_counselling_histories.html">clients_counselling_histories</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_audit_logs.html">cvwo_audit_logs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_problem_types.html">migrated_category_problem_types</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_other_assessed_problems.html">case_other_assessed_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/schema_migrations.html">schema_migrations</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">80</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/email_settings.html">email_settings</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_dialects.html">migrated_category_dialects</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activity_letters.html">case_activity_letters</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_referrals.html">intake_referrals</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/attachments_references.html">attachments_references</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activity_social_reports.html">case_activity_social_reports</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/staff.html">staff</a></td>
+				  <td class="detail" align="right">24</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/sage_organisations.html">sage_organisations</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_initial_actions.html">intake_initial_actions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/calendar_events.html">calendar_events</a></td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">20</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_assessed_problems.html">intake_assessed_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases_workers.html">case_cases_workers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_non_sessions.html">intake_non_sessions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_venues.html">cvwo_venues</a></td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_sessions.html">intake_sessions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/questionnaire_questionnaires.html">questionnaire_questionnaires</a></td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/delayed_jobs.html">delayed_jobs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_presenting_problems.html">supervision_presenting_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/recipient_settings.html">recipient_settings</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_religions.html">migrated_category_religions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_relationships.html">migrated_category_relationships</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_incomes.html">migrated_category_incomes</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_sessions_participants.html">supervision_sessions_participants</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_education_levels.html">migrated_category_education_levels</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_referral_sources.html">intake_referral_sources</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activities_cases.html">case_activities_cases</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_organisations.html">cvwo_organisations</a></td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_particulars.html">migrated_particulars</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">55</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_outcomes.html">intake_outcomes</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/questionnaire_answers.html">questionnaire_answers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_intakes_clients.html">intake_intakes_clients</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_callers.html">intake_callers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_sessions.html">supervision_sessions</a></td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activity_programmes.html">case_activity_programmes</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activities.html">case_activities</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_transfer_taken_actions.html">case_transfer_taken_actions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases_histories.html">case_cases_histories</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people_contacts.html">cvwo_people_contacts</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/event_events_clients.html">event_events_clients</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/supervision_relationships.html">supervision_relationships</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/centres.html">centres</a></td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/staff_roles.html">staff_roles</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_addresses.html">cvwo_addresses</a></td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">15</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_key_assessed_problems.html">case_key_assessed_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_activities.html">intake_activities</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_reopens.html">case_reopens</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_temporal_permissions.html">intake_temporal_permissions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">12</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases_clients.html">case_cases_clients</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_cases.html">case_cases</a></td>
+				  <td class="detail" align="right">9</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">29</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/staff_employment_periods.html">staff_employment_periods</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/event_events_staffs.html">event_events_staffs</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/calendar_events_participants.html">calendar_events_participants</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_housing_types.html">migrated_category_housing_types</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/carecorner_organisations.html">carecorner_organisations</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people_languages.html">cvwo_people_languages</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/versions.html">versions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">107</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_intakes_workers.html">intake_intakes_workers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">5</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_presenting_problems.html">intake_presenting_problems</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_category_marital_statuses.html">migrated_category_marital_statuses</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/attachments.html">attachments</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people_next_of_kin.html">cvwo_people_next_of_kin</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_transfers.html">case_transfers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">20</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/intake_preferred_contact_times.html">intake_preferred_contact_times</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_kins_particulars.html">migrated_kins_particulars</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">39</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/next_identifiers.html">next_identifiers</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/ccp_organisations.html">ccp_organisations</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/activities.html">activities</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people.html">cvwo_people</a></td>
+				  <td class="detail" align="right">10</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">35</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/cvwo_people_cohabitants.html">cvwo_people_cohabitants</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_activity_teleconversations.html">case_activity_teleconversations</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/case_sessions.html">case_sessions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">16</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/migrated_case_records.html">migrated_case_records</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">41</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/read_marks.html">read_marks</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">6</td>
+				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/event_sessions.html">event_sessions</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">11</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/clients.html">clients</a></td>
+				  <td class="detail" align="right">7</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">18</td>
+				  <td class="detail" align="right">4</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				  			</table>
+            </div>
+            <!-- /.box-body -->
+          </div>			
+      </section>
+      <!-- /.content -->
+	  <script>
+          var config = {
+	          pagination: true
+          }
+	  </script>    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+<!-- SheetJS -->
+<script src="bower/js-xlsx/xlsx.full.min.js"></script>
+<!-- pdfmake -->
+<script src="bower/pdfmake/pdfmake.min.js"></script>
+<script src="bower/pdfmake/vfs_fonts.js"></script>
+<!-- SlimScroll -->
+<script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="bower/codemirror/codemirror.js"></script>
+<script src="bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="bower/admin-lte/dist/js/app.min.js"></script>
+<script src="main.js"></script>
+<script src="schemaSpy.js"></script>
+</body>
+</html>

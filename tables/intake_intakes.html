@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>intake_intakes - carecorner_rails_development Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="../schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../bower/html5shiv/html5shiv.min.js"></script>
+  <script src="../bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../index.html" class="navbar-brand"><b>carecorner_rails_development</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+			<li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+			<li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>intake_intakes</h1></br>
+		      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <h3 id="Columns" class="box-title">Columns</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+            <div class="box-body">
+				<div class="row">
+					<div id="button_group_one" class="col-md-3 col-sm-6"></div>
+					<div id="button_group_two" class="col-md-2 col-sm-4 pull-right text-right"></div>
+				</div>
+				<table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead align='left'>
+				<tr>
+				  <th>Column</th>
+				  <th>Type</th>
+				  <th>Size</th>
+				  <th title='Are nulls allowed?'>Nulls</th>
+				  <th title='Is column automatically updated?'>Auto</th>
+				  <th title='Default value'>Default</th>
+				  <th title='Columns in tables that reference this column'>Children</th>
+				  <th title='Columns in tables that are referenced by this column'>Parents</th>
+				  <th title='Comments' class="toggle"><span>Comments</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title='Automatically updated by the database'>√</td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="case_cases.intake_id references intake_intakes.id via case_cases_intake_id_fk">
+						<a href='case_cases.html'>case_cases</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						case_cases_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_activities.intake_id references intake_intakes.id via intake_activities_intake_id_fk">
+						<a href='intake_activities.html'>intake_activities</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_activities_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_initial_actions.intake_id references intake_intakes.id via intake_initial_actions_intake_id_fk">
+						<a href='intake_initial_actions.html'>intake_initial_actions</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_initial_actions_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_intakes_clients.intake_id references intake_intakes.id via intake_intakes_clients_intake_id_fk">
+						<a href='intake_intakes_clients.html'>intake_intakes_clients</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_intakes_clients_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_intakes_workers.intake_id references intake_intakes.id via intake_intakes_workers_intake_id_fk">
+						<a href='intake_intakes_workers.html'>intake_intakes_workers</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_intakes_workers_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_not_making_appointment_reasons.intake_id references intake_intakes.id via intake_not_making_appointment_reasons_intake_id_fk">
+						<a href='intake_not_making_appointment_reasons.html'>intake_not_making_appointment_reasons</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_not_making_appointment_reasons_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_preferred_contact_times.intake_id references intake_intakes.id via intake_preferred_contact_times_intake_id_fk">
+						<a href='intake_preferred_contact_times.html'>intake_preferred_contact_times</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_preferred_contact_times_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_presenting_problems.intake_id references intake_intakes.id via intake_presenting_problems_intake_id_fk">
+						<a href='intake_presenting_problems.html'>intake_presenting_problems</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_presenting_problems_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_referral_sources.intake_id references intake_intakes.id via intake_referral_sources_intake_id_fk">
+						<a href='intake_referral_sources.html'>intake_referral_sources</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_referral_sources_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_special_needs.intake_id references intake_intakes.id via intake_special_needs_intake_id_fk">
+						<a href='intake_special_needs.html'>intake_special_needs</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_special_needs_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				   <tr>
+					<td title="intake_temporal_permissions.intake_id references intake_intakes.id via intake_temporal_permissions_intake_id_fk">
+						<a href='intake_temporal_permissions.html'>intake_temporal_permissions</a><span class='relatedKey'>.intake_id</span>
+					</td>
+					<td class="constraint detail">
+						intake_temporal_permissions_intake_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="centre_id">centre_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="intake_intakes.centre_id references centres.id via intake_intakes_centre_id_fk">
+						<a href='centres.html'>centres</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						intake_intakes_centre_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="workflow_state">workflow_state</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="ecms_id">ecms_id</span></td>
+				 <td>VARCHAR</td>
+				 <td>30</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="display_id">display_id</span></td>
+				 <td>VARCHAR</td>
+				 <td>24</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="reopened_from_case_id">reopened_from_case_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="intake_intakes.reopened_from_case_id references case_cases.id via intake_intakes_reopened_from_case_id_fk">
+						<a href='case_cases.html'>case_cases</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						intake_intakes_reopened_from_case_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="start_date">start_date</span></td>
+				 <td>DATETIME</td>
+				 <td>19</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="close_date">close_date</span></td>
+				 <td>DATETIME</td>
+				 <td>19</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="intake_author_id">intake_author_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="intake_intakes.intake_author_id references staff.id via intake_intakes_intake_author_id_fk">
+						<a href='staff.html'>staff</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						intake_intakes_intake_author_id_fk <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="counselling_fee">counselling_fee</span></td>
+				 <td>DECIMAL</td>
+				 <td>12,2</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="intake_remarks">intake_remarks</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="assistant_counsellor">assistant_counsellor</span></td>
+				 <td>VARCHAR</td>
+				 <td>255</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="problem_details">problem_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="is_suicidal">is_suicidal</span></td>
+				 <td>BIT</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="is_under_threat">is_under_threat</span></td>
+				 <td>BIT</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="emotionally_unstable_client_details">emotionally_unstable_client_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="action_taken_details">action_taken_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="special_needs_details">special_needs_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="initial_action_taken_details">initial_action_taken_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="not_making_appointment_details">not_making_appointment_details</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="created_at">created_at</span></td>
+				 <td>DATETIME</td>
+				 <td>19</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="updated_at">updated_at</span></td>
+				 <td>DATETIME</td>
+				 <td>19</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="creator_id">creator_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="updater_id">updater_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="deleter_id">deleter_id</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="deleted_at">deleted_at</span></td>
+				 <td>DATETIME</td>
+				 <td>19</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="legacy_data">legacy_data</span></td>
+				 <td>BIT</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="is_under_psychiatric">is_under_psychiatric</span></td>
+				 <td>BIT</td>
+				 <td>0</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="dementia">dementia</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="mental_health">mental_health</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="mental_health_condition">mental_health_condition</span></td>
+				 <td>MEDIUMTEXT</td>
+				 <td>16777215</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="family_members_involved">family_members_involved</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="mandatory">mandatory</span></td>
+				 <td>INT</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+								</tbody>
+				</table>
+				<p title='33 columns'>Table contained <span id="recordNumber">3</span> rows<p/>
+			</div>
+		</div>
+		<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-sitemap"></i>
+
+              <h3 id="Indexes" class="box-title">Indexes</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">
+				<table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+				<thead>
+				 <tr>
+				  <th>Constraint Name</th>
+				  <th>Type</th>
+				  <th>Sort</th>
+				  <th>Column(s)</th>
+				 </tr>
+				</thead>
+				<tbody>
+				 <tr>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+				  <td>Primary key</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>index_intake_intakes_on_deleted_at</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>deleted_at</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>intake_intakes_centre_id_fk</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>centre_id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>intake_intakes_intake_author_id_fk</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>intake_author_id</td>
+				 </tr>				 
+				 <tr>
+				  <td title='Indexed'>intake_intakes_reopened_from_case_id_fk</td>
+				  <td>Performance</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>reopened_from_case_id</td>
+				 </tr>				 
+				</tbody>
+				</table>   			  
+			</div><!-- /.box-body -->
+		</div>
+				<div class="box box-primary">		
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+
+              <h3 id="Relationships" class="box-title">Relationships</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>	
+			<div class="box-body">	
+			<div class="nav-tabs-custom" style="cursor: move;">
+            <!-- Tabs within a box -->
+			<h5>Close relationships within degrees of separation</h5>
+            <ul class="nav nav-tabs pull-left ui-sortable-handle">
+			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
+			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
+            </ul>
+            <div class="tab-content no-padding">            
+				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="case_cases.html" title="case_cases" alt="" coords="693,1523,1015,1787">
+<area shape="rect" id="node2" href="centres.html" title="centres" alt="" coords="5,1441,133,1564">
+<area shape="rect" id="node3" href="intake_intakes.html" title="intake_intakes" alt="" coords="177,969,625,2007">
+<area shape="rect" id="node6" href="staff.html" title="staff" alt="" coords="5,2020,133,2196">
+<area shape="rect" id="node4" href="intake_activities.html" title="intake_activities" alt="" coords="768,5,940,240">
+<area shape="rect" id="node5" href="intake_initial_actions.html" title="intake_initial_actions" alt="" coords="749,257,959,404">
+<area shape="rect" id="node7" href="intake_intakes_clients.html" title="intake_intakes_clients" alt="" coords="745,421,963,597">
+<area shape="rect" id="node8" href="intake_intakes_workers.html" title="intake_intakes_workers" alt="" coords="739,1804,969,1980">
+<area shape="rect" id="node9" href="intake_not_making_appointment_reasons.html" title="intake_not_making_appointment_reasons" alt="" coords="669,615,1039,761">
+<area shape="rect" id="node10" href="intake_preferred_contact_times.html" title="intake_preferred_contact_times" alt="" coords="709,779,999,925">
+<area shape="rect" id="node11" href="intake_presenting_problems.html" title="intake_presenting_problems" alt="" coords="721,943,987,1089">
+<area shape="rect" id="node12" href="intake_referral_sources.html" title="intake_referral_sources" alt="" coords="737,1107,971,1341">
+<area shape="rect" id="node13" href="intake_special_needs.html" title="intake_special_needs" alt="" coords="747,1359,961,1505">
+<area shape="rect" id="node14" href="intake_temporal_permissions.html" title="intake_temporal_permissions" alt="" coords="717,1997,991,2203">
+</map>
+
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/intake_intakes.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
+					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="calendar_events.html" title="calendar_events" alt="" coords="691,147,848,235">
+<area shape="rect" id="node2" href="staff.html" title="staff" alt="" coords="277,601,405,777">
+<area shape="rect" id="node37" href="users.html" title="users" alt="" coords="20,633,121,721">
+<area shape="rect" id="node3" href="case_activities.html" title="case_activities" alt="" coords="695,2820,844,2908">
+<area shape="rect" id="node4" href="case_cases.html" title="case_cases" alt="" coords="180,1773,501,2037">
+<area shape="rect" id="node7" href="case_types.html" title="case_types" alt="" coords="5,1893,136,1981">
+<area shape="rect" id="node8" href="centres.html" title="centres" alt="" coords="7,1475,135,1597">
+<area shape="rect" id="node9" href="intake_intakes.html" title="intake_intakes" alt="" coords="545,1624,993,2661">
+<area shape="rect" id="node5" href="case_activities_cases.html" title="case_activities_cases" alt="" coords="1129,3025,1315,3113">
+<area shape="rect" id="node6" href="case_activity_teleconversations.html" title="case_activity_teleconversations" alt="" coords="649,252,889,340">
+<area shape="rect" id="node10" href="case_cases_clients.html" title="case_cases_clients" alt="" coords="1135,897,1309,985">
+<area shape="rect" id="node11" href="clients.html" title="clients" alt="" coords="714,1272,825,1360">
+<area shape="rect" id="node21" href="cvwo_organisations.html" title="cvwo_organisations" alt="" coords="252,1648,429,1736">
+<area shape="rect" id="node12" href="case_cases_workers.html" title="case_cases_workers" alt="" coords="679,1377,860,1465">
+<area shape="rect" id="node13" href="case_closures.html" title="case_closures" alt="" coords="696,357,843,445">
+<area shape="rect" id="node14" href="case_goals.html" title="case_goals" alt="" coords="704,2925,835,3013">
+<area shape="rect" id="node15" href="case_key_assessed_problems.html" title="case_key_assessed_problems" alt="" coords="653,3031,885,3119">
+<area shape="rect" id="node16" href="case_other_assessed_problems.html" title="case_other_assessed_problems" alt="" coords="649,3136,890,3224">
+<area shape="rect" id="node17" href="case_questionnaires.html" title="case_questionnaires" alt="" coords="1132,252,1312,340">
+<area shape="rect" id="node18" href="case_reopens.html" title="case_reopens" alt="" coords="697,499,842,587">
+<area shape="rect" id="node19" href="case_temporal_permissions.html" title="case_temporal_permissions" alt="" coords="660,1483,879,1571">
+<area shape="rect" id="node20" href="case_transfers.html" title="case_transfers" alt="" coords="695,604,844,692">
+<area shape="rect" id="node22" href="event_events.html" title="event_events" alt="" coords="270,1143,411,1231">
+<area shape="rect" id="node23" href="event_events_staffs.html" title="event_events_staffs" alt="" coords="681,1061,857,1149">
+<area shape="rect" id="node24" href="intake_activities.html" title="intake_activities" alt="" coords="1136,2075,1308,2309">
+<area shape="rect" id="node25" href="intake_initial_actions.html" title="intake_initial_actions" alt="" coords="1117,2327,1327,2473">
+<area shape="rect" id="node26" href="intake_intakes_clients.html" title="intake_intakes_clients" alt="" coords="1113,1225,1331,1401">
+<area shape="rect" id="node27" href="intake_intakes_workers.html" title="intake_intakes_workers" alt="" coords="1107,535,1337,711">
+<area shape="rect" id="node28" href="intake_not_making_appointment_reasons.html" title="intake_not_making_appointment_reasons" alt="" coords="1037,1419,1407,1565">
+<area shape="rect" id="node29" href="intake_outcomes.html" title="intake_outcomes" alt="" coords="689,745,850,833">
+<area shape="rect" id="node30" href="intake_preferred_contact_times.html" title="intake_preferred_contact_times" alt="" coords="1077,1583,1367,1729">
+<area shape="rect" id="node31" href="intake_presenting_problems.html" title="intake_presenting_problems" alt="" coords="1089,1747,1355,1893">
+<area shape="rect" id="node32" href="intake_referral_sources.html" title="intake_referral_sources" alt="" coords="1105,2573,1339,2808">
+<area shape="rect" id="node33" href="cvwo_people.html" title="cvwo_people" alt="" coords="699,2715,839,2803">
+<area shape="rect" id="node34" href="intake_special_needs.html" title="intake_special_needs" alt="" coords="1115,1911,1329,2057">
+<area shape="rect" id="node35" href="intake_temporal_permissions.html" title="intake_temporal_permissions" alt="" coords="1085,1003,1359,1208">
+<area shape="rect" id="node36" href="next_identifiers.html" title="next_identifiers" alt="" coords="265,1409,417,1497">
+<area shape="rect" id="node38" href="staff_employment_periods.html" title="staff_employment_periods" alt="" coords="664,851,875,939">
+<area shape="rect" id="node39" href="staff_roles.html" title="staff_roles" alt="" coords="706,1167,833,1255">
+<area shape="rect" id="node40" href="supervision_relationships.html" title="supervision_relationships" alt="" coords="665,956,873,1044">
+<area shape="rect" id="node41" href="supervision_sessions_participants.html" title="supervision_sessions_participants" alt="" coords="642,5,897,93">
+</map>
+
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/intake_intakes.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+				</div>
+			  			</div>
+			</div>
+		  </div><!-- /.box-body -->
+		</div>
+	      </section>
+    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+<!-- SheetJS -->
+<script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+<!-- pdfmake -->
+<script src="../bower/pdfmake/pdfmake.min.js"></script>
+<script src="../bower/pdfmake/vfs_fonts.js"></script>
+<!-- SlimScroll -->
+<script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="../bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="../bower/codemirror/codemirror.js"></script>
+<script src="../bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="../bower/admin-lte/dist/js/app.min.js"></script>
+<script src="table.js"></script>
+<script src="../schemaSpy.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>carecorner_rails_development Database</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+  <!-- Code Mirror -->
+  <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+  <!-- Fonts -->
+  <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- Salvattore -->
+  <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+  <!-- SchemaSpy -->
+  <link rel="stylesheet" href="schemaSpy.css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="bower/html5shiv/html5shiv.min.js"></script>
+  <script src="bower/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand"><b>carecorner_rails_development</b> Database</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+			<li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+			<li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+			<li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+			<li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
+			<li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+			<li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Main content -->
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>Utility Tables</h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+              <i class="fa fa-code-fork"></i>
+              <h3 class="box-title">Orphan Tables</h3>
+            </div>			
+            <div class="box-body">
+			<div id="grid" data-columns>
+				<div class="item">
+					<img src='diagrams/orphans/schema_migrations.1degree.png' usemap='#schema_migrations' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/carecorner_organisations.1degree.png' usemap='#carecorner_organisations' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/ccp_organisations.1degree.png' usemap='#ccp_organisations' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/display_settings_settings.1degree.png' usemap='#display_settings_settings' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/sage_organisations.1degree.png' usemap='#sage_organisations' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/case_presenting_problems.1degree.png' usemap='#case_presenting_problems' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/case_transfer_taken_actions.1degree.png' usemap='#case_transfer_taken_actions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/email_settings.1degree.png' usemap='#email_settings' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/supervision_presenting_problems.1degree.png' usemap='#supervision_presenting_problems' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/case_activity_letters.1degree.png' usemap='#case_activity_letters' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/case_activity_programmes.1degree.png' usemap='#case_activity_programmes' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/case_activity_social_reports.1degree.png' usemap='#case_activity_social_reports' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/intake_assessed_problems.1degree.png' usemap='#intake_assessed_problems' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/intake_callers.1degree.png' usemap='#intake_callers' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/intake_referral_activities.1degree.png' usemap='#intake_referral_activities' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/intake_non_sessions.1degree.png' usemap='#intake_non_sessions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_dialects.1degree.png' usemap='#migrated_category_dialects' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_education_levels.1degree.png' usemap='#migrated_category_education_levels' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_housing_types.1degree.png' usemap='#migrated_category_housing_types' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_incomes.1degree.png' usemap='#migrated_category_incomes' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_marital_statuses.1degree.png' usemap='#migrated_category_marital_statuses' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_problem_types.1degree.png' usemap='#migrated_category_problem_types' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_professions.1degree.png' usemap='#migrated_category_professions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_relationships.1degree.png' usemap='#migrated_category_relationships' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_religions.1degree.png' usemap='#migrated_category_religions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_category_sors.1degree.png' usemap='#migrated_category_sors' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/read_marks.1degree.png' usemap='#read_marks' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/recipient_settings.1degree.png' usemap='#recipient_settings' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/versions.1degree.png' usemap='#versions' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/cvwo_audit_logs.1degree.png' usemap='#cvwo_audit_logs' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/activities.1degree.png' usemap='#activities' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/delayed_jobs.1degree.png' usemap='#delayed_jobs' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_session_infos.1degree.png' usemap='#migrated_session_infos' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_kins_particulars.1degree.png' usemap='#migrated_kins_particulars' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_case_records.1degree.png' usemap='#migrated_case_records' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+				<div class="item">
+					<img src='diagrams/orphans/migrated_particulars.1degree.png' usemap='#migrated_particulars' style="max-width:100%;" border='0' alt='' align='top'></img>
+				</div>
+			</div>
+			<map id="schema_migrations" name="schema_migrations">
+<area shape="rect" id="node1" href="tables/schema_migrations.html" title="schema_migrations" alt="" coords="5,5,279,104">
+</map>
+<map id="carecorner_organisations" name="carecorner_organisations">
+<area shape="rect" id="node1" href="tables/carecorner_organisations.html" title="carecorner_organisations" alt="" coords="5,5,325,133">
+</map>
+<map id="ccp_organisations" name="ccp_organisations">
+<area shape="rect" id="node1" href="tables/ccp_organisations.html" title="ccp_organisations" alt="" coords="5,5,271,133">
+</map>
+<map id="display_settings_settings" name="display_settings_settings">
+<area shape="rect" id="node1" href="tables/display_settings_settings.html" title="display_settings_settings" alt="" coords="5,5,293,133">
+</map>
+<map id="sage_organisations" name="sage_organisations">
+<area shape="rect" id="node1" href="tables/sage_organisations.html" title="sage_organisations" alt="" coords="5,5,279,133">
+</map>
+<map id="case_presenting_problems" name="case_presenting_problems">
+<area shape="rect" id="node1" href="tables/case_presenting_problems.html" title="case_presenting_problems" alt="" coords="5,5,305,163">
+</map>
+<map id="case_transfer_taken_actions" name="case_transfer_taken_actions">
+<area shape="rect" id="node1" href="tables/case_transfer_taken_actions.html" title="case_transfer_taken_actions" alt="" coords="5,5,317,163">
+</map>
+<map id="email_settings" name="email_settings">
+<area shape="rect" id="node1" href="tables/email_settings.html" title="email_settings" alt="" coords="5,5,240,163">
+</map>
+<map id="supervision_presenting_problems" name="supervision_presenting_problems">
+<area shape="rect" id="node1" href="tables/supervision_presenting_problems.html" title="supervision_presenting_problems" alt="" coords="5,5,360,163">
+</map>
+<map id="case_activity_letters" name="case_activity_letters">
+<area shape="rect" id="node1" href="tables/case_activity_letters.html" title="case_activity_letters" alt="" coords="5,5,336,192">
+</map>
+<map id="case_activity_programmes" name="case_activity_programmes">
+<area shape="rect" id="node1" href="tables/case_activity_programmes.html" title="case_activity_programmes" alt="" coords="5,5,385,192">
+</map>
+<map id="case_activity_social_reports" name="case_activity_social_reports">
+<area shape="rect" id="node1" href="tables/case_activity_social_reports.html" title="case_activity_social_reports" alt="" coords="5,5,397,192">
+</map>
+<map id="intake_assessed_problems" name="intake_assessed_problems">
+<area shape="rect" id="node1" href="tables/intake_assessed_problems.html" title="intake_assessed_problems" alt="" coords="5,5,337,221">
+</map>
+<map id="intake_callers" name="intake_callers">
+<area shape="rect" id="node1" href="tables/intake_callers.html" title="intake_callers" alt="" coords="5,5,311,221">
+</map>
+<map id="intake_referral_activities" name="intake_referral_activities">
+<area shape="rect" id="node1" href="tables/intake_referral_activities.html" title="intake_referral_activities" alt="" coords="5,5,367,221">
+</map>
+<map id="intake_non_sessions" name="intake_non_sessions">
+<area shape="rect" id="node1" href="tables/intake_non_sessions.html" title="intake_non_sessions" alt="" coords="5,5,341,251">
+</map>
+<map id="migrated_category_dialects" name="migrated_category_dialects">
+<area shape="rect" id="node1" href="tables/migrated_category_dialects.html" title="migrated_category_dialects" alt="" coords="5,5,340,251">
+</map>
+<map id="migrated_category_education_levels" name="migrated_category_education_levels">
+<area shape="rect" id="node1" href="tables/migrated_category_education_levels.html" title="migrated_category_education_levels" alt="" coords="5,5,409,251">
+</map>
+<map id="migrated_category_housing_types" name="migrated_category_housing_types">
+<area shape="rect" id="node1" href="tables/migrated_category_housing_types.html" title="migrated_category_housing_types" alt="" coords="5,5,393,251">
+</map>
+<map id="migrated_category_incomes" name="migrated_category_incomes">
+<area shape="rect" id="node1" href="tables/migrated_category_incomes.html" title="migrated_category_incomes" alt="" coords="5,5,345,251">
+</map>
+<map id="migrated_category_marital_statuses" name="migrated_category_marital_statuses">
+<area shape="rect" id="node1" href="tables/migrated_category_marital_statuses.html" title="migrated_category_marital_statuses" alt="" coords="5,5,407,251">
+</map>
+<map id="migrated_category_problem_types" name="migrated_category_problem_types">
+<area shape="rect" id="node1" href="tables/migrated_category_problem_types.html" title="migrated_category_problem_types" alt="" coords="5,5,395,251">
+</map>
+<map id="migrated_category_professions" name="migrated_category_professions">
+<area shape="rect" id="node1" href="tables/migrated_category_professions.html" title="migrated_category_professions" alt="" coords="5,5,372,251">
+</map>
+<map id="migrated_category_relationships" name="migrated_category_relationships">
+<area shape="rect" id="node1" href="tables/migrated_category_relationships.html" title="migrated_category_relationships" alt="" coords="5,5,380,251">
+</map>
+<map id="migrated_category_religions" name="migrated_category_religions">
+<area shape="rect" id="node1" href="tables/migrated_category_religions.html" title="migrated_category_religions" alt="" coords="5,5,348,251">
+</map>
+<map id="migrated_category_sors" name="migrated_category_sors">
+<area shape="rect" id="node1" href="tables/migrated_category_sors.html" title="migrated_category_sors" alt="" coords="5,5,315,251">
+</map>
+<map id="read_marks" name="read_marks">
+<area shape="rect" id="node1" href="tables/read_marks.html" title="read_marks" alt="" coords="5,5,236,251">
+</map>
+<map id="recipient_settings" name="recipient_settings">
+<area shape="rect" id="node1" href="tables/recipient_settings.html" title="recipient_settings" alt="" coords="5,5,271,280">
+</map>
+<map id="versions" name="versions">
+<area shape="rect" id="node1" href="tables/versions.html" title="versions" alt="" coords="5,5,255,280">
+</map>
+<map id="cvwo_audit_logs" name="cvwo_audit_logs">
+<area shape="rect" id="node1" href="tables/cvwo_audit_logs.html" title="cvwo_audit_logs" alt="" coords="5,5,257,309">
+</map>
+<map id="activities" name="activities">
+<area shape="rect" id="node1" href="tables/activities.html" title="activities" alt="" coords="5,5,241,397">
+</map>
+<map id="delayed_jobs" name="delayed_jobs">
+<area shape="rect" id="node1" href="tables/delayed_jobs.html" title="delayed_jobs" alt="" coords="5,5,231,427">
+</map>
+<map id="migrated_session_infos" name="migrated_session_infos">
+<area shape="rect" id="node1" href="tables/migrated_session_infos.html" title="migrated_session_infos" alt="" coords="5,5,312,515">
+</map>
+<map id="migrated_kins_particulars" name="migrated_kins_particulars">
+<area shape="rect" id="node1" href="tables/migrated_kins_particulars.html" title="migrated_kins_particulars" alt="" coords="5,5,328,1219">
+</map>
+<map id="migrated_case_records" name="migrated_case_records">
+<area shape="rect" id="node1" href="tables/migrated_case_records.html" title="migrated_case_records" alt="" coords="5,5,308,1277">
+</map>
+<map id="migrated_particulars" name="migrated_particulars">
+<area shape="rect" id="node1" href="tables/migrated_particulars.html" title="migrated_particulars" alt="" coords="5,5,415,1688">
+</map>
+
+			</div>
+		</div>			
+      </section>    
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div>
+      <div class="pull-right hidden-xs">
+        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+      </div>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+<!-- SheetJS -->
+<script src="bower/js-xlsx/xlsx.full.min.js"></script>
+<!-- pdfmake -->
+<script src="bower/pdfmake/pdfmake.min.js"></script>
+<script src="bower/pdfmake/vfs_fonts.js"></script>
+<!-- SlimScroll -->
+<script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+<!-- Salvattore -->
+<script src="bower/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="bower/anchor-js/anchor.min.js"></script>
+<!-- CodeMirror -->
+<script src="bower/codemirror/codemirror.js"></script>
+<script src="bower/codemirror/sql.js"></script>
+<!-- AdminLTE App -->
+<script src="bower/admin-lte/dist/js/app.min.js"></script>
+<script src=""></script>
+<script src="schemaSpy.js"></script>
+</body>
+</html>
